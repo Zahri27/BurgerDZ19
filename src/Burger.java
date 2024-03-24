@@ -1,43 +1,35 @@
 public class Burger {
- private String bun;
- private String meat;
- private String cheese;
- private String greens;
- private boolean mayo;
 
-    public Burger() {
-        this.bun = "Bun";
-        this.meat = "Meat";
-        this.cheese = "Cheese";
-        this.greens = "Greens";
-        this.mayo = true;
-        printComposition();
+    private String bun;
+    private String meat;
+    private String cheese;
+    private String greens;
+    private String mayonnaise;
+
+    public Burger(String bun, String meat, String cheese, String greens, String mayonnaise) {
+        this.bun = bun;
+        this.meat = meat;
+        this.cheese = cheese;
+        this.greens = greens;
+        this.mayonnaise = mayonnaise;
+        printBurgerComposition();
     }
 
-    public Burger(boolean mayo) {
-        this.bun = "Bun";
-        this.meat = "Meat";
-        this.cheese = "Cheese";
-        this.greens = "Greens";
-        this.mayo = mayo;
-        printComposition();
+    public Burger(String bun, String meat, String cheese, String greens) {
+        this(bun, meat, cheese, greens, null);
     }
 
-    public Burger(String extraMeat){
-        this.bun = "Bun";
-        this.meat = "Double Meat";
-        this.cheese = "Cheese";
-this.greens = "Greens";
-this.mayo = true;
-printComposition();
+    public Burger(String bun, String meat) {
+        this(bun, meat, "Чеддер", "Салат", "Майонез");
     }
 
-        private void printComposition() {
-        System.out.println("Burger composition:");
-System.out.println("Bun: " + bun);
-System.out.println("Meat: " + meat);
-System.out.println("Cheese: " + cheese);
-        System.out.println("Greens: " + greens);
- System.out.println();
+    private void printBurgerComposition() {
+        System.out.println("Состав бургера:");
+        System.out.println("Булочка: " + bun);
+        System.out.println("Мясо: " + meat);
+        System.out.println("Сыр: " + cheese);
+        System.out.println("Зелень: " + greens);
+        System.out.println("Майонез: " + (mayonnaise != null ? "Да" : "Нет"));
+        System.out.println();
     }
 }

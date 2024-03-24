@@ -1,8 +1,12 @@
 public class BurgerMain {
-
     public static void main(String[] args) {
-        Burger burger1 = new Burger("Цельнозерновая", "Говядина");
-        Burger burger2 = new Burger("Белая", "Курица", "Моцарелла", "Шпинат");
-        Burger burger3 = new Burger("Бриошь", "Двойная говядина", "Гауда", "Руккола", true);
+        System.out.println("Making regular burger:");
+        Burger regularBurger = new Burger();
+
+        System.out.println("Making diet burger:");
+        Burger dietBurger = new Burger(false);
+
+        System.out.println("Making burger with double meat:");
+        Burger doubleMeatBurger = new Burger("Double Meat");
     }
 }
